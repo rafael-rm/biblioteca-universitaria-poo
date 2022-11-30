@@ -13,24 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Origem\Entidades">
+      <UniqueIdentifier>{dc638f47-d388-4b7e-9576-d3dc36f5dbd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Entidades">
+      <UniqueIdentifier>{c5aa72d2-989a-4838-ad6c-0eeff79e2546}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="AcervoBase.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="Autor.cpp">
-      <Filter>Arquivos de Origem</Filter>
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="AcervoBase.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AcervoBase.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
     <ClInclude Include="Autor.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="AcervoBase.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

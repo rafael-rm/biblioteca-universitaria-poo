@@ -15,9 +15,13 @@ int main(){
 	teste->setNome("Gui");
 	teste->setDataNascimento("29-12-22");
 
-	AcervoBase* teste2 = new AcervoBase();
+	AcervoBase* livro = new AcervoBase();
 
-	teste->setObras(teste2);
+	livro->setPalavraChave("As longas tranças de um careca");
+	livro->setPalavraChave("Gui é um cara maluco");
+	vector<string> palavras = livro->getPalavrasChaves();
+	std::cout << "tfeste" << endl;
+	
 
 	return 0;
 }

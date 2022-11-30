@@ -1,78 +1,96 @@
 #include "AcervoBase.h"
 
 
-AcervoBase::AcervoBase()
-{		
-	//autores;
-	titulo = "Titulo";
-	edicao = 1;
-	cidade = "Cidade";
-	editora = "Editora";
-	ano = 1900;
-	cdu = "1234567891234";
-	assunto = "Assunto";
-	//palavrasChave;
-	qtdExemplares = 1;
+AcervoBase::AcervoBase() {
 }
 
-AcervoBase::~AcervoBase()
-{
+AcervoBase::~AcervoBase() {
 }
 
-string AcervoBase::getTitulo(){
+
+// Metodos GET
+vector<string> AcervoBase::getAutores() {
+	return autores;
+}
+
+string AcervoBase::getTitulo() {
 	return titulo;
 }
 
-//vector<Autor*> AcervoBase::getAutores(){
-//	return autores;
-//}
+int AcervoBase::getEdicao() {
+	return edicao;
+}
 
-string AcervoBase::getCidade(){
+string AcervoBase::getCidade() {
 	return cidade;
 }
 
-string AcervoBase::getEditora(){
+string AcervoBase::getEditora() {
 	return editora;
 }
 
-int AcervoBase::getAno(){
+int AcervoBase::getAno() {
 	return ano;
 }
 
-string AcervoBase::getCdu(){
+string AcervoBase::getCdu() {
 	return cdu;
 }
 
-string AcervoBase::getAssunto(){
+string AcervoBase::getAssunto() {
 	return assunto;
 }
 
+vector<string> AcervoBase::getPalavrasChaves() {
+	return palavras_chave;
+}
 
-//void AcervoBase::setAutor(string autor){
-//	this->autores;
-//}
+int AcervoBase::getQtdExemplares() {
+	return qtd_exemplares;
+}
 
-void AcervoBase::setTitulo(string titulo){
+
+// Metodos SET
+void AcervoBase::setAutor(string autor) {
+	this->autores.push_back(autor);
+}
+
+void AcervoBase::setTitulo(string titulo) {
 	this->titulo = titulo;
 }
 
-void AcervoBase::setEditora(string editora){
+void AcervoBase::setEdicao(int edicao) {
+	this->edicao = (edicao >= 1) ? edicao : 1;
+}
+
+void AcervoBase::setCidade(string cidade) {
+	this->cidade = cidade;
+}
+
+void AcervoBase::setEditora(string editora) {
 	this->editora = editora;
 }
 
-void AcervoBase::setAno(int ano){
+void AcervoBase::setAno(int ano) {
 	this->ano = ano;
 }
 
-void AcervoBase::setCdu(string cdu){
+void AcervoBase::setCdu(string cdu) {
 	this->cdu = cdu;
 }
 
-void AcervoBase::setAssunto(string assunto){
+void AcervoBase::setAssunto(string assunto) {
 	this->assunto = assunto;
 }
 
-//void AcervoBase::setPalavrasChave(string palavra_chave){
-//	this->palavra_chave;
-//}
+void AcervoBase::setPalavraChave(string palavra_chave) {
+	this->palavras_chave.push_back(palavra_chave);
+}
 
+void AcervoBase::setQtdExemplares(int qtd_exemplares) {
+	this->qtd_exemplares = (qtd_exemplares > 0) ? qtd_exemplares : 0;
+}
+
+void AcervoBase::imprimir() {
+	cout << "Imprimir" << endl;
+}
