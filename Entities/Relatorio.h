@@ -7,5 +7,7 @@ class Relatorio : public Documento
 	public:
 		Relatorio();
 		~Relatorio();
+
+		void imprimir();
 };
 
