@@ -20,8 +20,16 @@ int main(){
 	livro->setPalavraChave("As longas tranças de um careca");
 	livro->setPalavraChave("Gui é um cara maluco");
 	vector<string> palavras = livro->getPalavrasChaves();
-	std::cout << "tfeste" << endl;
-	
 
 	return 0;
+}
+
+
+int menu(){
+	int opcao = 0;
+	do{
+		system("cls");
+		cout << "[INFO] Menu" << endl;
+	} while (!opcao >= 0 && opcao <= 10);
+	return opcao;
 }

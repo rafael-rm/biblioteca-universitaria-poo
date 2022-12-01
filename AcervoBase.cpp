@@ -2,6 +2,14 @@
 
 
 AcervoBase::AcervoBase() {
+	titulo = "";
+	edicao = 0;
+	cidade = "";
+	editora = "";
+	ano = 0;
+	cdu = "";
+	assunto = "";
+	qtd_exemplares = 0;
 }
 
 AcervoBase::~AcervoBase() {

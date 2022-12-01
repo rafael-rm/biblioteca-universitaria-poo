@@ -21,11 +21,15 @@
   <ItemGroup>
     <ClCompile Include="AcervoBase.cpp" />
     <ClCompile Include="Autor.cpp" />
+    <ClCompile Include="Documento.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Midia.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AcervoBase.h" />
     <ClInclude Include="Autor.h" />
+    <ClInclude Include="Documento.h" />
+    <ClInclude Include="Midia.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
