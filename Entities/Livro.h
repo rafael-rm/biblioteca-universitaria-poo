@@ -11,8 +11,11 @@ class Livro : public Documento
         long long getIsbn();
 		void setIsbn(long long isbn);
 
+		void imprimir();
+	
 
 	private:
 		long long isbn;
 };
+
 

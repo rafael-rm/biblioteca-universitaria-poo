@@ -100,13 +100,14 @@ void AcervoBase::setQtdExemplares(int qtd_exemplares) {
 }
 
 void AcervoBase::imprimir() {
+	cout << "Titulo: " << titulo << endl;
+
 	cout << "Autores: ";
 	for (int i = 0; i < autores.size(); i++) {
 		cout << autores[i] << "; ";
 	}
 	cout << endl;
-
-	cout << "Titulo: " << titulo << endl;
+	
 	cout << "Edicao: " << edicao << endl;
 	cout << "Cidade: " << cidade << endl;
 	cout << "Editora: " << editora << endl;

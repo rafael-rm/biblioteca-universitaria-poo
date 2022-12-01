@@ -19,6 +19,8 @@ class Mapa : public Documento
 		EnumMapa getTipo();
 		void setTipo(EnumMapa tipo);
 
+		void imprimir();
+
 
 	protected:
 		EnumMapa tipo;

@@ -2,6 +2,9 @@
 
 
 Periodico::Periodico() {
+	ISSN = "";
+	tipo = REVISTA;
+
 }
 
 Periodico::~Periodico() {
@@ -24,4 +27,10 @@ void Periodico::setIssn(string issn) {
 
 void Periodico::setPeriodico(EnumPeriodico tipo) {
 	this->tipo = tipo;
+}
+
+void Periodico::imprimir() {
+	Documento::imprimir();
+	cout << "ISSN: " << this->ISSN << endl;
+	cout << "Tipo: " << this->tipo << endl;
 }

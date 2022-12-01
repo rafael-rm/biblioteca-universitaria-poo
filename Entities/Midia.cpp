@@ -18,5 +18,4 @@ void Midia::setTipo(EnumMidia tipo) {
 
 void Midia::imprimir() {
 	AcervoBase::imprimir();
-
 }

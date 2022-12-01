@@ -14,6 +14,8 @@ class Documento : public AcervoBase
 		void setNumPag(int num_pag);
 		void setTamPag(float tam_pag);
 
+		void imprimir();
+
 
 	protected:
 		int num_pag;

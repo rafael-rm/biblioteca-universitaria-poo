@@ -20,6 +20,8 @@ class Periodico : public Documento
 		void setIssn(string issn);
 		void setPeriodico(EnumPeriodico tipo);
 
+		void imprimir();
+
 
 	protected:
 		string ISSN;

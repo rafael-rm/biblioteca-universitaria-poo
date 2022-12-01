@@ -17,8 +17,8 @@ class Cartaz : public Documento
 		
 		EnumCartaz getTipo();
 		void setTipo(EnumCartaz tipo);
-	
-	
+		
+		void imprimir();
 	
 	private:
 		EnumCartaz tipo;

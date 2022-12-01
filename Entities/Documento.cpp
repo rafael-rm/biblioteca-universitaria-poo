@@ -24,3 +24,10 @@ void Documento::setNumPag(int num_pag){
 void Documento::setTamPag(float tam_pag){
 	this->tam_pag = (tam_pag > 0.0) ? tam_pag : 30;
 }
+
+void Documento::imprimir(){
+	cout << "\t\tDocumento" << endl;
+	AcervoBase::imprimir();
+	cout << "Numero pagina: " << num_pag << endl;
+	cout << "Tamanho pagina: " << tam_pag << endl;
+}
