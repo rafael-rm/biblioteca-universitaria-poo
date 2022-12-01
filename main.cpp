@@ -12,6 +12,45 @@ using namespace std;
 
 
 int main(){
+	int opcao, opcao_sub;
+	do
+	{
+		opcao = menu_principal();
+		switch (opcao) {
+		case CRUD:
+
+			do {
+				opcao_sub = menu_crud();
+				switch (opcao_sub) {
+				case 1: // Listar
+					cout << "Opcao 1";
+					system("pause > nul");
+					break;
+				case 2: // Cadastrar
+					cout << "Opcao 2";
+					system("pause > nul");
+					break;
+				case 3: // Remover
+					cout << "Opcao 3";
+					system("pause > nul");
+					break;
+				case 4: // Editar
+					cout << "Opcao 4";
+					system("pause > nul");
+					break;
+				}
+
+			} while ((opcao_sub != 0));
+			break;
+
+		case 2:
+			break;
+		}
+
+		system("cls");
+	} while ((opcao != 0));
+
+
 	Cartaz* livro = new Cartaz();
 	livro->setAutor("Rafael");
 	livro->setAutor("Laura");
