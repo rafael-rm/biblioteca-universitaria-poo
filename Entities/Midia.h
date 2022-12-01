@@ -17,6 +17,7 @@ class Midia : public AcervoBase
 		~Midia();
 		EnumMidia getTipo();
 		void setTipo(EnumMidia tipo);
+		void imprimir();
 
 
 	protected:

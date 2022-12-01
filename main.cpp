@@ -10,17 +10,16 @@ using namespace std;
 
 
 int main(){
-	Autor* teste = new Autor();
-
-	teste->setNome("Gui");
-	teste->setDataNascimento("29-12-22");
-
 	AcervoBase* livro = new AcervoBase();
-
-	livro->setPalavraChave("As longas tranças de um careca");
-	livro->setPalavraChave("Gui é um cara maluco");
-	vector<string> palavras = livro->getPalavrasChaves();
-
+	livro->setAutor("Rafael");
+	livro->setAutor("Laura");
+	livro->setAutor("Guilherme");
+	livro->setPalavraChave("C++");
+	livro->setPalavraChave("Python");
+	livro->setPalavraChave("Java");
+	cout << "teste" << endl;
+	livro->imprimir();
+	system("pause > nul");
 	return 0;
 }
 
@@ -30,6 +29,6 @@ int menu(){
 	do{
 		system("cls");
 		cout << "[INFO] Menu" << endl;
-	} while (!opcao >= 0 && opcao <= 10);
+	} while (~opcao >= 0 && opcao <= 10);
 	return opcao;
 }

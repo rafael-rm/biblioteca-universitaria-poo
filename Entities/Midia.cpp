@@ -15,3 +15,8 @@ EnumMidia Midia::getTipo() {
 void Midia::setTipo(EnumMidia tipo) {
 	this->tipo = tipo;
 }
+
+void Midia::imprimir() {
+	AcervoBase::imprimir();
+
+}

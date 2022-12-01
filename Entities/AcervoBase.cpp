@@ -2,13 +2,13 @@
 
 
 AcervoBase::AcervoBase() {
-	titulo = "";
+	titulo = "Default";
 	edicao = 0;
-	cidade = "";
-	editora = "";
+	cidade = "Default";
+	editora = "Default";
 	ano = 0;
-	cdu = "";
-	assunto = "";
+	cdu = "Default";
+	assunto = "Default";
 	qtd_exemplares = 0;
 }
 
@@ -100,5 +100,24 @@ void AcervoBase::setQtdExemplares(int qtd_exemplares) {
 }
 
 void AcervoBase::imprimir() {
-	cout << "Imprimir" << endl;
-}
+	cout << "Autores: ";
+	for (int i = 0; i < autores.size(); i++) {
+		cout << autores[i] << "; ";
+	}
+	cout << endl;
+
+	cout << "Titulo: " << titulo << endl;
+	cout << "Edicao: " << edicao << endl;
+	cout << "Cidade: " << cidade << endl;
+	cout << "Editora: " << editora << endl;
+	cout << "Ano: " << ano << endl;
+	cout << "CDU: " << cdu << endl;
+	cout << "Assunto: " << assunto << endl;
+	cout << "Quantidade de exemplares: " << qtd_exemplares << endl;
+	
+	cout << "Palavras-chave: ";
+	for (int i = 0; i < palavras_chave.size(); i++) {
+		cout << palavras_chave[i] << "; ";
+	}
+	cout << endl;
+};
