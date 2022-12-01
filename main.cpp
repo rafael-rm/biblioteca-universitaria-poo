@@ -6,9 +6,12 @@
 #include "Entities/AcervoBase.h"
 #include "Entities/Cartaz.h"
 
-
+#define CRUD 1
 
 using namespace std;
+
+int menu_principal();
+int menu_crud();
 
 
 int main(){
@@ -51,6 +54,7 @@ int main(){
 	} while ((opcao != 0));
 
 
+
 	Cartaz* livro = new Cartaz();
 	livro->setAutor("Rafael");
 	livro->setAutor("Laura");
@@ -60,15 +64,37 @@ int main(){
 	livro->setPalavraChave("Java");
 	livro->imprimir();
 	system("pause > nul");
+
 	return 0;
 }
 
 
-int menu(){
+int menu_principal(){
 	int opcao = 0;
 	do{
 		system("cls");
-		cout << "[INFO] Menu" << endl;
-	} while (~opcao >= 0 && opcao <= 10);
+		cout << "[INFO] Menu principal" << endl << endl;
+		cout << "1- Gerenciar acervo" << endl;
+		cout << endl << "Opcao: ";
+		cin >> opcao;
+		system("cls");
+	} while (!(opcao >= 0 && opcao <= 4));
+	return opcao;
+}
+
+int menu_crud() {
+	int opcao = 0;
+	do {
+		system("cls");
+		cout << "[INFO] Menu CRUD" << endl << endl;
+		cout << "1- Listar item" << endl;
+		cout << "2- Cadastrar item" << endl;
+		cout << "3- Remover item" << endl;
+		cout << "4- Editar item" << endl;
+		cout << "0- Voltar para o menu principal" << endl;
+		cout << endl << "Opcao: ";
+		cin >> opcao;
+		system("cls");
+	} while (!(opcao >= 0 && opcao <= 4));
 	return opcao;
 }
