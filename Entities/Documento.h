@@ -1,6 +1,6 @@
 #pragma once
-
 #include "AcervoBase.h"
+
 
 class Documento : public AcervoBase
 {

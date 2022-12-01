@@ -24,31 +24,67 @@
     <ClCompile Include="main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Autor.cpp">
+    <ClCompile Include="Entities\Autor.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="AcervoBase.cpp">
+    <ClCompile Include="Entities\AcervoBase.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="Documento.cpp">
+    <ClCompile Include="Entities\Documento.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="Midia.cpp">
+    <ClCompile Include="Entities\Midia.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Livro.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Mapa.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Periodico.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\TCC.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Relatorio.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Cartaz.cpp">
+      <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Autor.h">
+    <ClInclude Include="Entities\Autor.h">
       <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="AcervoBase.h">
+    <ClInclude Include="Entities\AcervoBase.h">
       <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="Documento.h">
+    <ClInclude Include="Entities\Documento.h">
       <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="Midia.h">
+    <ClInclude Include="Entities\Midia.h">
       <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Livro.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Mapa.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Periodico.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\TCC.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Relatorio.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Cartaz.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

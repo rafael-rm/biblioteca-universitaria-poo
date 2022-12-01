@@ -2,8 +2,8 @@
 #include <vector>
 #include <list>
 
-#include "Autor.h"
-#include "AcervoBase.h"
+#include "Entities/Autor.h"
+#include "Entities/AcervoBase.h"
 
 
 using namespace std;
