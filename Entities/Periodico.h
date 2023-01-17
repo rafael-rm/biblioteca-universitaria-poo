@@ -21,6 +21,7 @@ class Periodico : public Documento
 		void setPeriodico(EnumPeriodico tipo);
 
 		void imprimir();
+		void cadastrar();
 
 
 	protected:

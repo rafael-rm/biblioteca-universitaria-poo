@@ -18,6 +18,7 @@ class Midia : public AcervoBase
 		EnumMidia getTipo();
 		void setTipo(EnumMidia tipo);
 		void imprimir();
+		void cadastrar();
 
 
 	protected:

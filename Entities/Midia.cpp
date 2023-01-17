@@ -39,3 +39,37 @@ void Midia::imprimir() {
 			break;
 	}
 }
+
+void Midia::cadastrar() {
+	cout << "\t\tCadastro de mídia" << endl;
+	AcervoBase::cadastrar();
+	int opcao;
+
+	do {
+		cout << "Informe o tipo: " << endl;
+		cout << "0 - Fita" << endl;
+		cout << "1 - VHS" << endl;
+		cout << "2 - CD" << endl;
+		cout << "3 - DVD" << endl;
+		cout << "Opcao: ";
+
+		cin >> opcao;
+		switch (opcao) {
+		case 0:
+			setTipo(FITA);
+			break;
+		case 1:
+			setTipo(VHS);
+			break;
+		case 2:
+			setTipo(CD);
+			break;
+		case 3:
+			setTipo(DVD);
+			break;
+		default:
+			setTipo(FITA);
+			break;
+		}
+	} while (opcao < 0 || opcao > 3);
+}

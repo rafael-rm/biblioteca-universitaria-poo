@@ -12,6 +12,7 @@ class Livro : public Documento
 		void setIsbn(long long isbn);
 
 		void imprimir();
+		void cadastrar();
 	
 
 	private:

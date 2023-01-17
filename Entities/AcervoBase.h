@@ -13,6 +13,7 @@ public:
 	AcervoBase();
 	~AcervoBase();
 
+	int getId();
 	vector<string> getAutores();
 	string getTitulo();
 	int getEdicao();
@@ -24,6 +25,7 @@ public:
 	vector<string> getPalavrasChaves();
 	int getQtdExemplares();
 		
+	void setId(int id);
 	void setAutor(string autor); 
 	void setTitulo(string titulo);
 	void setEdicao(int edicao);
@@ -36,9 +38,11 @@ public:
 	void setQtdExemplares(int qtd_exemplares);
 
 	virtual void imprimir();
+	virtual void cadastrar();
 
 
 protected:
+	int id;
 	vector<string> autores;
 	string titulo;
 	int edicao;

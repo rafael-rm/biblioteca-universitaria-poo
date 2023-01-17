@@ -3,7 +3,7 @@
 
 
 enum EnumMapa {
-	POLITICO,
+	MPOLITICO,
 	DEMOGRAFICO,
 	HISTORICO,
 	ECONOMICO
@@ -20,7 +20,7 @@ class Mapa : public Documento
 		void setTipo(EnumMapa tipo);
 
 		void imprimir();
-
+		void cadastrar();
 
 	protected:
 		EnumMapa tipo;

@@ -21,3 +21,13 @@ void Livro::imprimir() {
 	Documento::imprimir();
 	cout << "ISBN: " << isbn << endl;
 }
+
+void Livro::cadastrar() {
+	cout << "\t\tCadastro de livro" << endl;
+	Documento::cadastrar();
+	long long isbn;
+
+	cout << "Digite o ISBN: ";
+	cin >> isbn;
+	this->setIsbn(isbn);
+}

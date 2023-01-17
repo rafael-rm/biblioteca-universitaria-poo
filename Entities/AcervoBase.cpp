@@ -17,6 +17,10 @@ AcervoBase::~AcervoBase() {
 
 
 // Metodos GET
+int AcervoBase::getId() {
+	return id;
+}
+
 vector<string> AcervoBase::getAutores() {
 	return autores;
 }
@@ -59,6 +63,10 @@ int AcervoBase::getQtdExemplares() {
 
 
 // Metodos SET
+void AcervoBase::setId(int id) {
+	this->id = id;
+}
+
 void AcervoBase::setAutor(string autor) {
 	this->autores.push_back(autor);
 }
@@ -100,6 +108,7 @@ void AcervoBase::setQtdExemplares(int qtd_exemplares) {
 }
 
 void AcervoBase::imprimir() {
+	cout << "Id: " << id << endl;
 	cout << "Titulo: " << titulo << endl;
 
 	cout << "Autores: ";
@@ -122,3 +131,56 @@ void AcervoBase::imprimir() {
 	}
 	cout << endl;
 };
+
+//todo setar Id auto-incrementável
+void AcervoBase::cadastrar() {
+	cout << "Digite o titulo: ";
+	string titulo;
+	cin >> titulo;
+	setTitulo(titulo);
+
+	cout << "Digite a quantidade de autores:";
+	int qtd_autores;
+	cin >> qtd_autores;
+	for (int i = 0; i < qtd_autores; i++) {
+		string autor;
+		cout << "Digite o nome do autor " << i + 1 << ": ";
+		cin >> autor;
+		setAutor(autor);
+	}
+
+	cout << "Digite a edicao: ";
+	int edicao;
+	cin >> edicao;
+	setEdicao(edicao);
+
+	cout << "Digite a cidade: ";
+	string cidade;
+	cin >> cidade;
+	setCidade(cidade);
+
+	cout << "Digite a editora: ";
+	string editora;
+	cin >> editora;
+	setEditora(editora);
+
+	cout << "Digite o ano: ";
+	int ano;
+	cin >> ano;
+	setAno(ano);
+
+	cout << "Digite o CDU: ";
+	string cdu;
+	cin >> cdu;
+	setCdu(cdu);
+
+	cout << "Digite o assunto: ";
+	string assunto;
+	cin >> assunto;
+	setAssunto(assunto);
+
+	cout << "Digite a quantidade de emxeplares: ";
+	int qts_exemplares;
+	cin >> qtd_exemplares;
+	setQtdExemplares(qtd_exemplares);
+}
