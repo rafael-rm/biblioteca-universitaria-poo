@@ -32,8 +32,8 @@ void Documento::imprimir(){
 	cout << "Tamanho pagina: " << tam_pag << endl;
 }
 
-void Documento::cadastrar(){
-	AcervoBase::cadastrar();
+void Documento::cadastrar(int id){
+	AcervoBase::cadastrar(id);
 	cout << "Digite o numero de paginas: ";
 	int num_pag;
 	cin >> num_pag;

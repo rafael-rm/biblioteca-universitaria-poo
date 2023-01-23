@@ -9,6 +9,6 @@ class Relatorio : public Documento
 		~Relatorio();
 
 		void imprimir();
-		void cadastrar();
+		void cadastrar(int id);
 };
 

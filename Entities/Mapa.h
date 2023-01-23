@@ -20,7 +20,7 @@ class Mapa : public Documento
 		void setTipo(EnumMapa tipo);
 
 		void imprimir();
-		void cadastrar();
+		void cadastrar(int id);
 
 	protected:
 		EnumMapa tipo;

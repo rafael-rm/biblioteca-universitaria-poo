@@ -12,7 +12,7 @@ void Relatorio::imprimir() {
 	Documento::imprimir();
 }
 
-void Relatorio::cadastrar() {
+void Relatorio::cadastrar(int id) {
 	cout << "\t\tCadastro de Relatorio" << endl;
-	Documento::cadastrar();
+	Documento::cadastrar(id);
 }

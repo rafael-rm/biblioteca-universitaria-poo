@@ -22,9 +22,9 @@ void Livro::imprimir() {
 	cout << "ISBN: " << isbn << endl;
 }
 
-void Livro::cadastrar() {
+void Livro::cadastrar(int id) {
 	cout << "\t\tCadastro de livro" << endl;
-	Documento::cadastrar();
+	Documento::cadastrar(id);
 	long long isbn;
 
 	cout << "Digite o ISBN: ";

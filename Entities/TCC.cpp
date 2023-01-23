@@ -34,9 +34,9 @@ void TCC::imprimir() {
     }
 }
 
-void TCC::cadastrar() {
+void TCC::cadastrar(int id) {
     cout << "\t\tCadastro de TCC" << endl;
-    Documento::cadastrar();
+    Documento::cadastrar(id);
 
 	int opcao;
 

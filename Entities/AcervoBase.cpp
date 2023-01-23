@@ -61,6 +61,10 @@ int AcervoBase::getQtdExemplares() {
 	return qtd_exemplares;
 }
 
+int AcervoBase::getEmprestados() {
+	return emprestados;
+}
+
 
 // Metodos SET
 void AcervoBase::setId(int id) {
@@ -107,6 +111,14 @@ void AcervoBase::setQtdExemplares(int qtd_exemplares) {
 	this->qtd_exemplares = (qtd_exemplares > 0) ? qtd_exemplares : 0;
 }
 
+void AcervoBase::setEmprestados(int emprestados) {
+	if (emprestados > qtd_exemplares) {
+		cout << "Nao e possivel emprestar mais do que a quantidade de exemplares disponiveis" << endl;
+		return;
+	}
+	this->emprestados = (emprestados > 0) ? emprestados : 0;
+}
+
 void AcervoBase::imprimir() {
 	cout << "Id: " << id << endl;
 	cout << "Titulo: " << titulo << endl;
@@ -133,7 +145,9 @@ void AcervoBase::imprimir() {
 };
 
 //todo setar Id auto-incrementável
-void AcervoBase::cadastrar() {
+void AcervoBase::cadastrar(int id) {
+	setId(id);
+
 	cout << "Digite o titulo: ";
 	string titulo;
 	cin >> titulo;
@@ -179,7 +193,7 @@ void AcervoBase::cadastrar() {
 	cin >> assunto;
 	setAssunto(assunto);
 
-	cout << "Digite a quantidade de emxeplares: ";
+	cout << "Digite a quantidade de exemplares: ";
 	int qts_exemplares;
 	cin >> qtd_exemplares;
 	setQtdExemplares(qtd_exemplares);

@@ -36,9 +36,9 @@ void Cartaz::imprimir() {
 	}
 }
 
-void Cartaz::cadastrar() {
+void Cartaz::cadastrar(int id) {
 	cout << "\t\tCadastro de Cartaz" << endl;
-	Documento::cadastrar();
+	Documento::cadastrar(id);
 	int opcao;
 	do {
 		cout << "Tipo: " << endl;

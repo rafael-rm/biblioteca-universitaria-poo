@@ -15,7 +15,7 @@ class Documento : public AcervoBase
 		void setTamPag(float tam_pag);
 
 		void imprimir();
-		void cadastrar();
+		void cadastrar(int id);
 
 	protected:
 		int num_pag;

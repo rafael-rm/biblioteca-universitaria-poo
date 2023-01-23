@@ -24,6 +24,7 @@ public:
 	string getAssunto();
 	vector<string> getPalavrasChaves();
 	int getQtdExemplares();
+	int getEmprestados();
 		
 	void setId(int id);
 	void setAutor(string autor); 
@@ -36,9 +37,10 @@ public:
 	void setAssunto(string assunto);
 	void setPalavraChave(string palavra);
 	void setQtdExemplares(int qtd_exemplares);
+	void setEmprestados(int emprestados);
 
 	virtual void imprimir();
-	virtual void cadastrar();
+	virtual void cadastrar(int id);
 
 
 protected:
@@ -53,4 +55,5 @@ protected:
 	string assunto;
 	vector<string> palavras_chave;
 	int qtd_exemplares;
+	int emprestados;
 };

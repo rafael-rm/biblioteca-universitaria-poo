@@ -35,9 +35,9 @@ void Periodico::imprimir() {
 	cout << "Tipo: " << this->tipo << endl;
 }
 
-void Periodico::cadastrar() {
+void Periodico::cadastrar(int id) {
 	cout << "\t\tCadastro de Periodico" << endl;
-	Documento::cadastrar();
+	Documento::cadastrar(id);
 	
 	string issn;
 	cout << "Digite o ISSN: ";

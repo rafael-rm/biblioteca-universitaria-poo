@@ -36,9 +36,9 @@ void Mapa::imprimir(){
 	}
 
 }
-void Mapa::cadastrar(){
+void Mapa::cadastrar(int id){
 	cout << "\t\tCadastro de Mapa" << endl;
-	Documento::cadastrar();
+	Documento::cadastrar(id);
 	int opcao;
 	do {
 		cout << "Tipo: " << endl;

@@ -21,20 +21,18 @@ using namespace std;
 int menu_principal();
 int menu_crud();
 void listar_acervo(list<AcervoBase*> acervo);
+int menu_cadastrar();
+void cadastrar_acervo(int id, list<AcervoBase*> &acervo);
 
 
 int main(){
+	int id_count = 0;
 	int opcao, opcao_sub;
 
 	list<AcervoBase*> acervo;
 	list<AcervoBase*>::iterator it;
 
-	Cartaz* test = new Cartaz();
-
-	test->cadastrar();
-
-	acervo.push_back(test);
-
+	
 	system("pause");
 
 	do
@@ -53,6 +51,7 @@ int main(){
 					break;
 				case 2: // Cadastrar
 					cout << "Opcao 2";
+					cadastrar_acervo(id_count, acervo);
 					system("pause > nul");
 					break;
 				case 3: // Remover
@@ -75,18 +74,6 @@ int main(){
 		system("cls");
 	} while ((opcao != 0));
 
-
-
-	Cartaz* livro = new Cartaz();
-	livro->setAutor("Rafael");
-	livro->setAutor("Laura");
-	livro->setAutor("Guilherme");
-	livro->setPalavraChave("C++");
-	livro->setPalavraChave("Python");
-	livro->setPalavraChave("Java");
-	livro->imprimir();
-	system("pause > nul");
-
 	return 0;
 }
 
@@ -97,6 +84,7 @@ int menu_principal(){
 		system("cls");
 		cout << "[INFO] Menu principal" << endl << endl;
 		cout << "1- Gerenciar acervo" << endl;
+		cout << "2- Emprestar item" << endl;
 		cout << endl << "Opcao: ";
 		cin >> opcao;
 		system("cls");
@@ -109,11 +97,11 @@ int menu_crud() {
 	do {
 		system("cls");
 		cout << "[INFO] Menu CRUD" << endl << endl;
-		cout << "1- Listar item" << endl;
-		cout << "2- Cadastrar item" << endl;
-		cout << "3- Remover item" << endl;
-		cout << "4- Editar item" << endl;
-		cout << "0- Voltar para o menu principal" << endl;
+		cout << "1 - Listar item" << endl;
+		cout << "2 - Cadastrar item" << endl;
+		cout << "3 - Remover item" << endl;
+		cout << "4 - Editar item" << endl;
+		cout << "0 - Voltar para o menu principal" << endl;
 		cout << endl << "Opcao: ";
 		cin >> opcao;
 		system("cls");
@@ -126,15 +114,15 @@ int menu_listar() {
 	do {
 		system("cls");
 		cout << "[INFO] Menu Listar" << endl << endl;
-		cout << "1- Listar todos os itens" << endl;
-		cout << "2- Listar Livros" << endl;
-		cout << "3- Listar Mapas" << endl;
-		cout << "4- Listar Períodicos" <<  endl;
-		cout << "5- Listar TCC's" << endl;
-		cout << "6- Listar Relatórios" << endl;
-		cout << "7- Listar Cartazes" << endl;
-		cout << "8- Listar Midias" << endl;
-		cout << "0- Voltar" << endl;
+		cout << "1 - Listar todos os itens" << endl;
+		cout << "2 - Listar Livros" << endl;
+		cout << "3 - Listar Mapas" << endl;
+		cout << "4 - Listar Períodicos" <<  endl;
+		cout << "5 - Listar TCC's" << endl;
+		cout << "6 - Listar Relatórios" << endl;
+		cout << "7 - Listar Cartazes" << endl;
+		cout << "8 - Listar Midias" << endl;
+		cout << "0 - Voltar" << endl;
 		cout << endl << "Opcao: ";
 		cin >> opcao;
 		system("cls");
@@ -190,4 +178,64 @@ void listar_acervo(list<AcervoBase*> acervo) {
 		default:
 			break;
 	}
+}
+
+int menu_cadastrar() {
+	int opcao = 0;
+	do {
+		system("cls");
+		cout << "[INFO] Informe o item a ser cadastrado" << endl << endl;
+		cout << "1 - Cadastrar Livro" << endl;
+		cout << "2 - Cadastrar Mapa" << endl;
+		cout << "3 - Cadastrar Períodico" << endl;
+		cout << "4 - Cadastrar TCC" << endl;
+		cout << "5 - Cadastrar Relatório" << endl;
+		cout << "6 - Cadastrar Cartaz" << endl;
+		cout << "7 - Cadastrar Midia" << endl;
+		cout << "0 - Voltar" << endl;
+		cout << endl << "Opcao: ";
+		cin >> opcao;
+		system("cls");
+	} while (!(opcao >= 0 && opcao <= 8));
+	return opcao;
+}
+
+void cadastrar_acervo(int id, list<AcervoBase*> &acervo) {
+	list<AcervoBase*>::iterator it;
+	int opcao = menu_cadastrar();
+
+	if (opcao == 0) return;
+
+	AcervoBase* item;
+
+	switch (opcao)
+	{
+		case 1:
+			item = new Livro();
+			break;
+		case 2:
+			item = new Mapa();
+			break;
+		case 3:
+			item = new Periodico();
+			break;
+		case 4:
+			item = new TCC();
+			break;
+		case 5:
+			item = new Relatorio();
+			break;
+		case 6:
+			item = new Cartaz();
+			break;
+		case 7:
+			item = new Midia();
+			break;
+		default:
+			item = new Livro();
+			break;
+	}
+
+	item->cadastrar(++id);
+	acervo.push_back(item);
 }

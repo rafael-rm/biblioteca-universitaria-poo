@@ -17,7 +17,7 @@ class TCC : public Documento
 	void setTipo(EnumTCC tipo);
 
 	void imprimir();
-	void cadastrar();
+	void cadastrar(int id);
 
 	private:
 		EnumTCC tipo;
