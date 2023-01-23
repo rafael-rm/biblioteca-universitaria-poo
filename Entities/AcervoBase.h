@@ -41,7 +41,7 @@ public:
 
 	virtual void imprimir();
 	virtual void cadastrar(int id);
-
+	virtual void editar();
 
 protected:
 	int id;

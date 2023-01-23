@@ -15,6 +15,7 @@
 
 
 #define CRUD 1
+#define EMPRESTAR 2
 
 using namespace std;
 
@@ -23,7 +24,10 @@ int menu_crud();
 void listar_acervo(list<AcervoBase*> acervo);
 int menu_cadastrar();
 void cadastrar_acervo(int id, list<AcervoBase*> &acervo);
-
+AcervoBase* buscar_acervo(int id, list<AcervoBase*> acervo);
+void remover_acervo(list<AcervoBase*>& acervo);
+void editar_item(list<AcervoBase*> &acervo);
+void emprestar_item(list<AcervoBase*> &acervo);
 
 int main(){
 	int id_count = 0;
@@ -39,27 +43,34 @@ int main(){
 	{
 		opcao = menu_principal();
 		switch (opcao) {
-		case CRUD:
 
+		case EMPRESTAR:
+			emprestar_item(acervo);
+			system("pause > nul");
+			break;
+
+		case CRUD:
 			do {
 				opcao_sub = menu_crud();
 				switch (opcao_sub) {
 				case 1: // Listar
-					cout << "Opcao 1";
+					cout << "Opcao 1" << endl;
 					listar_acervo(acervo);
 					system("pause > nul");
 					break;
 				case 2: // Cadastrar
-					cout << "Opcao 2";
+					cout << "Opcao 2" << endl;
 					cadastrar_acervo(id_count, acervo);
 					system("pause > nul");
 					break;
 				case 3: // Remover
-					cout << "Opcao 3";
+					cout << "Opcao 3" << endl;
+					remover_acervo(acervo);
 					system("pause > nul");
 					break;
 				case 4: // Editar
-					cout << "Opcao 4";
+					cout << "Opcao 4" << endl;
+					editar_item(acervo);
 					system("pause > nul");
 					break;
 				}
@@ -67,7 +78,7 @@ int main(){
 			} while ((opcao_sub != 0));
 			break;
 
-		case 2:
+		case 3:
 			break;
 		}
 
@@ -238,4 +249,77 @@ void cadastrar_acervo(int id, list<AcervoBase*> &acervo) {
 
 	item->cadastrar(++id);
 	acervo.push_back(item);
+}
+
+AcervoBase* buscar_acervo(int id, list<AcervoBase*> acervo) {
+	AcervoBase* item;
+	list<AcervoBase*>::iterator it;
+
+	for (it = acervo.begin(); it != acervo.end(); it++)
+		if ((*it)->getId() == id) return (*it);
+	
+
+	return NULL;
+}
+
+void remover_acervo(list<AcervoBase*>& acervo) {
+	int id;
+	cout << "Entre com o id do item que deseja remover: " << endl;
+	cin >> id;
+
+	AcervoBase* item = buscar_acervo(id, acervo);
+	if (item == NULL) {
+		cout << "Item de id [" << id << "] não encontrado" << endl;
+		return;
+	}
+
+	char opcao;
+	cout << "Tem certeza que gostaria de remover o item do acervo(S/N)?" << endl;
+	cin >> opcao;
+	if (opcao == 'N') return;
+
+	acervo.remove(item);
+
+	cout << "Item removido com sucesso do acervo!" << endl;
+}
+
+
+void editar_item(list<AcervoBase*> &acervo){
+	list<AcervoBase*>::iterator it;
+	int id;
+
+	cout << "Entre com o id do item que deseja editar" << endl;
+	cin >> id;
+	
+	for (it = acervo.begin(); it != acervo.end(); it++){
+		if ((*it)->getId() == id){
+			(*it)->editar();
+		} else {
+			cout << "Item nao encontrado!" << endl;
+		}
+	}
+}
+
+void emprestar_item(list<AcervoBase*> &acervo){
+	list<AcervoBase*>::iterator it;
+	cout << "Entre com o id do item que deseja emprestar" << endl;
+	int id;
+	cin >> id;
+	int exemplares, emprestados;
+	for (it = acervo.begin(); it != acervo.end(); it++){
+		if ((*it)->getId() == id){
+			exemplares = (*it)->getQtdExemplares();
+			emprestados = (*it)->getEmprestados();
+			if (exemplares > emprestados){
+				(*it)->setEmprestados(emprestados + 1);
+				cout << "Item emprestado com sucesso" << endl;
+				return;
+			} else {
+				cout << "Nao ha exemplares disponiveis" << endl;
+				return;
+			}
+		}
+	}
+	cout << "Item nao encontrado" << endl;
+	return;
 }
