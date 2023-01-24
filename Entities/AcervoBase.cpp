@@ -120,27 +120,13 @@ void AcervoBase::setEmprestados(int emprestados) {
 }
 
 void AcervoBase::imprimir() {
-	cout << "Id: " << id << endl;
-	cout << "Titulo: " << titulo << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
 
-	cout << "Autores: ";
 	for (int i = 0; i < autores.size(); i++) {
-		cout << autores[i] << "; ";
+		cout << "Autor " << i+1 << " " << autores[i] << ". ";
 	}
 	cout << endl;
-	
-	cout << "Edicao: " << edicao << endl;
-	cout << "Cidade: " << cidade << endl;
-	cout << "Editora: " << editora << endl;
-	cout << "Ano: " << ano << endl;
-	cout << "CDU: " << cdu << endl;
-	cout << "Assunto: " << assunto << endl;
-	cout << "Quantidade de exemplares: " << qtd_exemplares << endl;
-	
-	cout << "Palavras-chave: ";
-	for (int i = 0; i < palavras_chave.size(); i++) {
-		cout << palavras_chave[i] << "; ";
-	}
+	cout << getTitulo() << " - " << getEdicao() << " ª Edição - " << getCidade() << ": " << getEditora() << ", " << getAno() << endl;
 	cout << endl;
 };
 

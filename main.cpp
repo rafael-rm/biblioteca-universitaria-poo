@@ -28,6 +28,7 @@ AcervoBase* buscar_acervo(int id, list<AcervoBase*> acervo);
 void remover_acervo(list<AcervoBase*>& acervo);
 void editar_item(list<AcervoBase*> &acervo);
 void emprestar_item(list<AcervoBase*> &acervo);
+void imprimir_ficha(list<AcervoBase*> acervo);
 
 int main(){
 	int id_count = 0;
@@ -79,6 +80,8 @@ int main(){
 			break;
 
 		case 3:
+			imprimir_ficha(acervo);
+			system("pause > nul");
 			break;
 		}
 
@@ -283,7 +286,6 @@ void remover_acervo(list<AcervoBase*>& acervo) {
 	cout << "Item removido com sucesso do acervo!" << endl;
 }
 
-
 void editar_item(list<AcervoBase*> &acervo){
 	list<AcervoBase*>::iterator it;
 	int id;
@@ -323,3 +325,12 @@ void emprestar_item(list<AcervoBase*> &acervo){
 	cout << "Item nao encontrado" << endl;
 	return;
 }
+
+void imprimir_ficha(list<AcervoBase*> acervo) {
+	list<AcervoBase*>::iterator it;
+
+	for (it = acervo.begin(); it != acervo.end(); it++) {
+		(*it)->imprimir();
+	}
+}
+

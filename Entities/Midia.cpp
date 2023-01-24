@@ -17,10 +17,17 @@ void Midia::setTipo(EnumMidia tipo) {
 }
 
 void Midia::imprimir() {
-	cout << "\t\tMidia" << endl;
 	AcervoBase::imprimir();
 
-	cout << "Tipo: ";
+	cout << "1. Assunto. ";
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
+	/*cout << "Tipo: ";
 	switch (this->tipo) {
 		case 0: 
 			cout << "fita" << endl;
@@ -37,7 +44,7 @@ void Midia::imprimir() {
 		default:
 			cout << "midia" << endl;
 			break;
-	}
+	}*/
 }
 
 void Midia::cadastrar(int id) {
