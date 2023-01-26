@@ -184,8 +184,8 @@ void AcervoBase::cadastrar(int id) {
 	cin >> qtd_exemplares;
 	setQtdExemplares(qtd_exemplares);
 }
-void AcervoBase::editar(){
 
+void AcervoBase::editar(){
 	cout << "Digite o titulo: ";
 	string titulo;
 	cin >> titulo;

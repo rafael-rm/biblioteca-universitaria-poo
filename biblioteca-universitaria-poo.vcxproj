@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AcervoController.cpp" />
     <ClCompile Include="Entities\Cartaz.cpp" />
     <ClCompile Include="Entities\AcervoBase.cpp" />
     <ClCompile Include="Entities\Autor.cpp" />
@@ -30,8 +31,10 @@
     <ClCompile Include="Entities\Periodico.cpp" />
     <ClCompile Include="Entities\TCC.cpp" />
     <ClCompile Include="Entities\Relatorio.cpp" />
+    <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AcervoController.h" />
     <ClInclude Include="Entities\Cartaz.h" />
     <ClInclude Include="Entities\AcervoBase.h" />
     <ClInclude Include="Entities\Autor.h" />
@@ -42,6 +45,7 @@
     <ClInclude Include="Entities\Periodico.h" />
     <ClInclude Include="Entities\TCC.h" />
     <ClInclude Include="Entities\Relatorio.h" />
+    <ClInclude Include="Menu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
