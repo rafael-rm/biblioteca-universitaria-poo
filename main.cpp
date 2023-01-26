@@ -9,6 +9,8 @@
 
 #define CRUD 1
 #define EMPRESTAR 2
+#define IMPRIMIRFICHA 3
+#define PESQUISAR 4
 
 using namespace std;
 
@@ -66,11 +68,11 @@ int main(){
 			controller->emprestar_item(acervo);
 			system("pause > nul");
 			break;
-		case 3:
+		case IMPRIMIRFICHA:
 			controller->imprimir_ficha(acervo);
 			system("pause > nul");
 			break;
-		case 4:
+		case PESQUISAR:
 			controller->pesquisar_acervo(acervo);
 			system("pause > nul");
 			break;
@@ -81,7 +83,6 @@ int main(){
 
 	return 0;
 }
-
 
 bool login() {
 	string login, senha;
@@ -94,4 +95,3 @@ bool login() {
 	}
 	return false;
 }
-
