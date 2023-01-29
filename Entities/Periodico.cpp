@@ -46,12 +46,13 @@ void Periodico::cadastrar(int id) {
 }
 
 void Periodico::registrar(ofstream& file) {
-	file.open("Periodico.txt");
+	file.open("Periodico.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
-		file << getIssn() << "; " << getTipo() << ";" << endl;
+		file << getIssn() << "; " << getTipo() << ";\n";
 		file.close();
 	}
 }

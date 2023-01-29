@@ -83,12 +83,13 @@ void Midia::cadastrar(int id) {
 }
 
 void Midia::registrar(ofstream& file) {
-	file.open("Midia.txt");
+	file.open("Midia.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		AcervoBase::registrar(file);
 		
-		file << getTipo() << ";" << endl;
+		file << getTipo() << ";\n";
 		file.close();
 	}
 }

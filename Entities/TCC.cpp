@@ -66,12 +66,13 @@ void TCC::cadastrar(int id) {
 }
 
 void TCC::registrar(ofstream& file) {
-	file.open("TCC.txt");
+	file.open("TCC.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
-		file << getTipo() << ";" << endl;
+		file << getTipo() << ";";
 		file.close();
 	}
 }

@@ -70,12 +70,13 @@ void Cartaz::cadastrar(int id) {
 }
 
 void Cartaz::registrar(ofstream& file) {
-	file.open("Cartaz.txt");
+	file.open("Cartaz.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
-		file << getTipo() << ";" << endl;
+		file << getTipo() << ";\n";
 		file.close();
 	}
 }

@@ -74,12 +74,13 @@ void Mapa::cadastrar(int id){
 }
 
 void Mapa::registrar(ofstream& file) {
-	file.open("Mapa.txt");
+	file.open("Mapa.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
-		file << getTipo() << ";" << endl;
+		file << getTipo() << ";\n";
 		file.close();
 	}
 }

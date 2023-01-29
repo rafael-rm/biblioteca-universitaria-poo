@@ -33,9 +33,10 @@ void Livro::cadastrar(int id) {
 }
 
 void Livro::registrar(ofstream& file) {
-	file.open("Livro.txt");
+	file.open("Livro.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
 		file << getIsbn() << ";" << endl;

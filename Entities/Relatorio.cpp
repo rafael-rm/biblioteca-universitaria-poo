@@ -18,12 +18,13 @@ void Relatorio::cadastrar(int id) {
 }
 
 void Relatorio::registrar(ofstream& file) {
-	file.open("Relatorio.txt");
+	file.open("Relatorio.txt", ios::app);
 
 	if (file.is_open()) {
+		file << endl;
 		Documento::registrar(file);
 
-		file << endl;
+		file << "\n";
 		file.close();
 	}
 }
