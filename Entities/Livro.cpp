@@ -31,3 +31,14 @@ void Livro::cadastrar(int id) {
 	cin >> isbn;
 	this->setIsbn(isbn);
 }
+
+void Livro::registrar(ofstream& file) {
+	file.open("Livro.txt");
+
+	if (file.is_open()) {
+		Documento::registrar(file);
+
+		file << getIsbn() << ";" << endl;
+		file.close();
+	}
+}

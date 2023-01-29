@@ -64,3 +64,14 @@ void TCC::cadastrar(int id) {
 		}
 	} while (opcao < 0 || opcao > 3);
 }
+
+void TCC::registrar(ofstream& file) {
+	file.open("TCC.txt");
+
+	if (file.is_open()) {
+		Documento::registrar(file);
+
+		file << getTipo() << ";" << endl;
+		file.close();
+	}
+}

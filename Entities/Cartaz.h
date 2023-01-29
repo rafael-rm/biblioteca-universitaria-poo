@@ -20,6 +20,7 @@ class Cartaz : public Documento
 		
 		void imprimir();
 		void cadastrar(int id);
+		void registrar(ofstream& file);
 	
 	private:
 		EnumCartaz tipo;

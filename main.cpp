@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
-
+#include <fstream>
 #include "AcervoController.h"
 
 #define LOGIN "admin"
@@ -80,6 +80,12 @@ int main(){
 
 		system("cls");
 	} while ((opcao != 0));
+
+
+	ofstream f;
+	for (it = acervo.begin(); it != acervo.end(); it++) {
+		(*it)->registrar(f);
+	}
 
 	return 0;
 }

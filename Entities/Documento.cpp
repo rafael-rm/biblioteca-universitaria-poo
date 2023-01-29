@@ -42,3 +42,12 @@ void Documento::cadastrar(int id){
 	cin >> tam_pag;
 	setTamPag(tam_pag);
 }
+
+void Documento::registrar(ofstream& file) {
+	if (file.is_open()) {
+		AcervoBase::registrar(file);
+
+		file << getNumPag() << ";" << getTamPag() << ";";
+		file.close();
+	}
+}

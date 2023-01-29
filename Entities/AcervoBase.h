@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 
 using namespace std;
@@ -42,6 +43,7 @@ public:
 	virtual void imprimir();
 	virtual void cadastrar(int id);
 	virtual void editar();
+	virtual void registrar(ofstream& file);
 
 protected:
 	int id;

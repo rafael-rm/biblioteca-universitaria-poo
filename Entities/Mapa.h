@@ -21,6 +21,7 @@ class Mapa : public Documento
 
 		void imprimir();
 		void cadastrar(int id);
+		void registrar(ofstream& file);
 
 	protected:
 		EnumMapa tipo;

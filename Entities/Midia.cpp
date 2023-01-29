@@ -81,3 +81,14 @@ void Midia::cadastrar(int id) {
 		break;
 	}
 }
+
+void Midia::registrar(ofstream& file) {
+	file.open("Midia.txt");
+
+	if (file.is_open()) {
+		AcervoBase::registrar(file);
+		
+		file << getTipo() << ";" << endl;
+		file.close();
+	}
+}

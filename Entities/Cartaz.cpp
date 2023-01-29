@@ -68,3 +68,14 @@ void Cartaz::cadastrar(int id) {
 		break;
 	}
 }
+
+void Cartaz::registrar(ofstream& file) {
+	file.open("Cartaz.txt");
+
+	if (file.is_open()) {
+		Documento::registrar(file);
+
+		file << getTipo() << ";" << endl;
+		file.close();
+	}
+}

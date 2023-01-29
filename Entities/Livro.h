@@ -13,7 +13,7 @@ class Livro : public Documento
 
 		void imprimir();
 		void cadastrar(int id);
-	
+		void registrar(ofstream& file);
 
 	private:
 		long long isbn;

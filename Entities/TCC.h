@@ -18,6 +18,7 @@ class TCC : public Documento
 
 	void imprimir();
 	void cadastrar(int id);
+	void registrar(ofstream& file);
 
 	private:
 		EnumTCC tipo;

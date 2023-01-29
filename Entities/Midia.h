@@ -19,6 +19,7 @@ class Midia : public AcervoBase
 		void setTipo(EnumMidia tipo);
 		void imprimir();
 		void cadastrar(int id);
+		void registrar(ofstream& file);
 
 
 	protected:

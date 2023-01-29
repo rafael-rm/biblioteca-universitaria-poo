@@ -72,3 +72,14 @@ void Mapa::cadastrar(int id){
 	}
 
 }
+
+void Mapa::registrar(ofstream& file) {
+	file.open("Mapa.txt");
+
+	if (file.is_open()) {
+		Documento::registrar(file);
+
+		file << getTipo() << ";" << endl;
+		file.close();
+	}
+}

@@ -44,3 +44,14 @@ void Periodico::cadastrar(int id) {
 	cin >> issn;
 	this->setIssn(issn);
 }
+
+void Periodico::registrar(ofstream& file) {
+	file.open("Periodico.txt");
+
+	if (file.is_open()) {
+		Documento::registrar(file);
+
+		file << getIssn() << "; " << getTipo() << ";" << endl;
+		file.close();
+	}
+}

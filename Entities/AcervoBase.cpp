@@ -149,6 +149,16 @@ void AcervoBase::cadastrar(int id) {
 		setAutor(autor);
 	}
 
+	cout << "Digite a quantidade de palavras chave:";
+	int qtd_palavras;
+	cin >> qtd_palavras;
+	for (int i = 0; i < qtd_palavras; i++) {
+		string palavra;
+		cout << "Digite a palavra chave " << i + 1 << ": ";
+		cin >> palavra;
+		setPalavraChave(palavra);
+	}
+
 	cout << "Digite a edicao: ";
 	int edicao;
 	cin >> edicao;
@@ -235,4 +245,23 @@ void AcervoBase::editar(){
 	int qts_exemplares;
 	cin >> qtd_exemplares;
 	setQtdExemplares(qtd_exemplares);
+}
+
+void AcervoBase::registrar(ofstream &file) {
+	vector<string>::iterator it;
+
+	if (file.is_open()) {
+		// Geral
+		file << getId() << "; " << getTitulo() << "; " << getAssunto() << "; ";
+		file << getCidade() << "; " << getEdicao() << "; " << getEditora() << "; ";
+		file << getAno() << "; " << getCdu() << "; " << getQtdExemplares() << "; " << getEmprestados() << "; ";
+
+		for (it = this->autores.begin(); it != autores.end(); it++)
+			file << (*it) << ", ";
+		file << "; ";
+
+		for (it = this->palavras_chave.begin(); it != palavras_chave.end(); it++)
+			file << (*it) << ", ";
+		file << "; ";
+	}
 }
