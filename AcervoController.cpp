@@ -3,7 +3,7 @@
 void AcervoController::listar_acervo(list<AcervoBase*> acervo)
 {
 	list<AcervoBase*>::iterator it;
-	int opcao = menu->menu_listar();
+	int opcao = Menu().menu_listar();
 
 	switch (opcao)
 	{
@@ -54,7 +54,7 @@ void AcervoController::listar_acervo(list<AcervoBase*> acervo)
 void AcervoController::cadastrar_acervo(list<AcervoBase*>& acervo)
 {
 	list<AcervoBase*>::iterator it;
-	int opcao = menu->menu_cadastrar();
+	int opcao = Menu().menu_cadastrar();
 
 	if (opcao == 0) return;
 

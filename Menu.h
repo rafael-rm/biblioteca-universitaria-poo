@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Menu
+static class Menu
 {
 	public:
 		static int menu_principal();

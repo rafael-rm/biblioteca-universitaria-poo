@@ -16,10 +16,9 @@
 #include "Entities/Documento.h"
 
 #pragma once
-class  AcervoController
+static class  AcervoController
 {
 	private:
-		Menu* menu = new Menu();
 		int id_counter = 0;
 
 	public:
