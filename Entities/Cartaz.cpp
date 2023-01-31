@@ -17,9 +17,17 @@ void Cartaz::setTipo(EnumCartaz tipo) {
 }
 
 void Cartaz::imprimir() {
-	cout << "\t\tCartaz" << endl;
-	AcervoBase::imprimir();
-	switch
+	Documento::imprimir();
+
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
+	/*switch
 		(tipo) {
 	case POLITICO:
 		cout << "Tipo: Politico" << endl;
@@ -33,7 +41,7 @@ void Cartaz::imprimir() {
 	default:
 		cout << "Tipo: Invalido" << endl;
 		break;
-	}
+	}*/
 }
 
 void Cartaz::cadastrar(int id) {

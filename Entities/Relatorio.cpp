@@ -8,8 +8,15 @@ Relatorio::~Relatorio() {
 }
 
 void Relatorio::imprimir() {
-	cout << "\t\tRelatorio" << endl;
 	Documento::imprimir();
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
 }
 
 void Relatorio::cadastrar(int id) {

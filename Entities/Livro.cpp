@@ -17,9 +17,15 @@ void Livro::setIsbn(long long isbn) {
 }
 
 void Livro::imprimir() {
-	cout << "\t\tLivro" << endl;
 	Documento::imprimir();
-	cout << "ISBN: " << isbn << endl;
+	cout << "ISBN: " << getIsbn() << endl << endl;
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
 }
 
 void Livro::cadastrar(int id) {

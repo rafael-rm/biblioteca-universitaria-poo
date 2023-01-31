@@ -16,8 +16,16 @@ void Mapa::setTipo(EnumMapa tipo) {
 	this->tipo = tipo;
 }
 void Mapa::imprimir(){
-	cout<<"\t\tMapa " << endl;
 	Documento::imprimir();
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
+	/*
 	switch (tipo) {
 	case EnumMapa::MPOLITICO:
 		cout << "Tipo: Politico" << endl;
@@ -33,7 +41,7 @@ void Mapa::imprimir(){
 		break;
 	default:
 		cout << "Tipo: Invalido " << endl;
-	}
+	}*/
 
 }
 void Mapa::cadastrar(int id){

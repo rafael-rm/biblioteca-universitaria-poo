@@ -17,10 +17,17 @@ void TCC::setTipo(EnumTCC tipo) {
 }
 
 void TCC::imprimir() {
-    cout << "\t\tTrabalho de Conclusao de Curso" << endl;
     Documento::imprimir();
 
-    cout << "Tipo: ";
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
+    /*cout << "Tipo: ";
     switch (this->tipo) {
         case 0:
             cout << "Monografia" << endl;
@@ -31,7 +38,7 @@ void TCC::imprimir() {
         case 2:
             cout << "Tese" << endl;
             break;
-    }
+    }*/
 }
 
 void TCC::cadastrar(int id) {

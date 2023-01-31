@@ -31,8 +31,15 @@ void Periodico::setPeriodico(EnumPeriodico tipo) {
 
 void Periodico::imprimir() {
 	Documento::imprimir();
-	cout << "ISSN: " << this->ISSN << endl;
-	cout << "Tipo: " << this->tipo << endl;
+	cout << "ISSN: " << getIssn() << endl << endl;
+	cout << "1. Assunto. " << getAssunto();
+	for (int i = 0; i < getPalavrasChaves().size(); i++) {
+		cout << getPalavrasChaves()[i] << ". ";
+	}
+
+	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
+	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
+
 }
 
 void Periodico::cadastrar(int id) {

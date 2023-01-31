@@ -9,6 +9,7 @@ int Menu::menu_principal() {
 		cout << "2 - Emprestar item" << endl;
 		cout << "3 - Imprimir ficha cartográfica" << endl;
 		cout << "4 - Pesquisar item no acervo" << endl;
+		cout << "0 - Encerrar programa" << endl;
 		cout << endl << "Opcao: ";
 		cin >> opcao;
 		system("cls");

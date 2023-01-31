@@ -36,29 +36,29 @@
     <ClCompile Include="Entities\Midia.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="Entities\Livro.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Entities\Mapa.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Entities\Periodico.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Entities\TCC.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Entities\Relatorio.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Entities\Cartaz.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="AcervoController.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
       <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Cartaz.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Livro.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Mapa.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Periodico.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Relatorio.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\TCC.cpp">
+      <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,29 +74,29 @@
     <ClInclude Include="Entities\Midia.h">
       <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="Entities\Livro.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Entities\Mapa.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Entities\Periodico.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Entities\TCC.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Entities\Relatorio.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Entities\Cartaz.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
     <ClInclude Include="AcervoController.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Cartaz.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Livro.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Mapa.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Periodico.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Relatorio.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\TCC.h">
+      <Filter>Arquivos de Cabeçalho\Entidades</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ void Documento::setTamPag(float tam_pag){
 
 void Documento::imprimir(){
 	AcervoBase::imprimir();
-	cout << getNumPag() << " pág: " << getTamPag() << "cm" << endl << endl;
+	cout << getNumPag() << " pág.: " << getTamPag() << "cm" << endl << endl;
 }
 
 void Documento::cadastrar(int id){

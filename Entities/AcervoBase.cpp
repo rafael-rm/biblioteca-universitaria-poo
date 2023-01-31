@@ -126,7 +126,7 @@ void AcervoBase::imprimir() {
 		cout << "Autor " << i+1 << " " << autores[i] << ". ";
 	}
 	cout << endl;
-	cout << getTitulo() << " - " << getEdicao() << " ª Edição - " << getCidade() << ": " << getEditora() << ", " << getAno() << endl;
+	cout << getTitulo() << " - " << getEdicao() << " ª Edição - " << getCidade() << ": " << getEditora() << ", " << getAno() << "." << endl;
 	cout << endl;
 };
 
