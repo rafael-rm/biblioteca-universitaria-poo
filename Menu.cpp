@@ -7,7 +7,7 @@ int Menu::menu_principal() {
 		cout << "[INFO] Menu principal" << endl << endl;
 		cout << "1 - Gerenciar acervo" << endl;
 		cout << "2 - Emprestar item" << endl;
-		cout << "3 - Imprimir ficha cartográfica" << endl;
+		cout << "3 - Imprimir ficha cartografica" << endl;
 		cout << "4 - Pesquisar item no acervo" << endl;
 		cout << endl << "Opcao: ";
 		cin >> opcao;
@@ -41,7 +41,7 @@ int Menu::menu_listar() {
 		cout << "1 - Listar todos os itens" << endl;
 		cout << "2 - Listar Livros" << endl;
 		cout << "3 - Listar Mapas" << endl;
-		cout << "4 - Listar Períodicos" << endl;
+		cout << "4 - Listar Periodicos" << endl;
 		cout << "5 - Listar TCC's" << endl;
 		cout << "6 - Listar Relatórios" << endl;
 		cout << "7 - Listar Cartazes" << endl;
@@ -61,7 +61,7 @@ int Menu::menu_cadastrar() {
 		cout << "[INFO] Informe o item a ser cadastrado" << endl << endl;
 		cout << "1 - Cadastrar Livro" << endl;
 		cout << "2 - Cadastrar Mapa" << endl;
-		cout << "3 - Cadastrar Períodico" << endl;
+		cout << "3 - Cadastrar Periodico" << endl;
 		cout << "4 - Cadastrar TCC" << endl;
 		cout << "5 - Cadastrar Relatório" << endl;
 		cout << "6 - Cadastrar Cartaz" << endl;

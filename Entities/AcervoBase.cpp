@@ -119,6 +119,10 @@ void AcervoBase::setEmprestados(int emprestados) {
 	this->emprestados = (emprestados > 0) ? emprestados : 0;
 }
 
+void AcervoBase::clearAutor() {
+	this->autores.clear();
+}
+
 void AcervoBase::imprimir() {
 	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
 
@@ -126,7 +130,7 @@ void AcervoBase::imprimir() {
 		cout << "Autor " << i+1 << " " << autores[i] << ". ";
 	}
 	cout << endl;
-	cout << getTitulo() << " - " << getEdicao() << " ª Edição - " << getCidade() << ": " << getEditora() << ", " << getAno() << endl;
+	cout << getTitulo() << " - " << getEdicao() << " ª Edicao - " << getCidade() << ": " << getEditora() << ", " << getAno() << endl;
 	cout << endl;
 };
 
@@ -136,20 +140,26 @@ void AcervoBase::cadastrar(int id) {
 
 	cout << "Digite o titulo: ";
 	string titulo;
-	cin >> titulo;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, titulo);
 	setTitulo(titulo);
 
-	cout << "Digite a quantidade de autores:";
+	cout << "Digite a quantidade de autores: ";
 	int qtd_autores;
 	cin >> qtd_autores;
+	cin.ignore();
 	for (int i = 0; i < qtd_autores; i++) {
 		string autor;
 		cout << "Digite o nome do autor " << i + 1 << ": ";
-		cin >> autor;
+		cin.clear();
+		fflush(stdin);
+		getline(cin, autor);
 		setAutor(autor);
 	}
 
-	cout << "Digite a quantidade de palavras chave:";
+	cout << "Digite a quantidade de palavras chave: ";
 	int qtd_palavras;
 	cin >> qtd_palavras;
 	for (int i = 0; i < qtd_palavras; i++) {
@@ -166,12 +176,17 @@ void AcervoBase::cadastrar(int id) {
 
 	cout << "Digite a cidade: ";
 	string cidade;
-	cin >> cidade;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, cidade);
 	setCidade(cidade);
 
 	cout << "Digite a editora: ";
 	string editora;
-	cin >> editora;
+	cin.clear();
+	fflush(stdin);
+	getline(cin, editora);
 	setEditora(editora);
 
 	cout << "Digite o ano: ";
@@ -181,12 +196,18 @@ void AcervoBase::cadastrar(int id) {
 
 	cout << "Digite o CDU: ";
 	string cdu;
-	cin >> cdu;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, cdu);
 	setCdu(cdu);
 
 	cout << "Digite o assunto: ";
 	string assunto;
-	cin >> assunto;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, assunto);
 	setAssunto(assunto);
 
 	cout << "Digite a quantidade de exemplares: ";
@@ -198,16 +219,21 @@ void AcervoBase::cadastrar(int id) {
 void AcervoBase::editar(){
 	cout << "Digite o titulo: ";
 	string titulo;
-	cin >> titulo;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, titulo);
 	setTitulo(titulo);
 
 	cout << "Digite a quantidade de autores:";
 	int qtd_autores;
 	cin >> qtd_autores;
+	cin.ignore();
+	clearAutor();
 	for (int i = 0; i < qtd_autores; i++) {
 		string autor;
 		cout << "Digite o nome do autor " << i + 1 << ": ";
-		cin >> autor;
+		getline(cin, autor);
 		setAutor(autor);
 	}
 
@@ -218,12 +244,17 @@ void AcervoBase::editar(){
 
 	cout << "Digite a cidade: ";
 	string cidade;
-	cin >> cidade;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, cidade);
 	setCidade(cidade);
 
 	cout << "Digite a editora: ";
 	string editora;
-	cin >> editora;
+	cin.clear();
+	fflush(stdin);
+	getline(cin, editora);
 	setEditora(editora);
 
 	cout << "Digite o ano: ";
@@ -238,7 +269,10 @@ void AcervoBase::editar(){
 
 	cout << "Digite o assunto: ";
 	string assunto;
-	cin >> assunto;
+	cin.clear();
+	fflush(stdin);
+	cin.ignore();
+	getline(cin, assunto);
 	setAssunto(assunto);
 
 	cout << "Digite a quantidade de exemplares: ";

@@ -40,6 +40,8 @@ public:
 	void setQtdExemplares(int qtd_exemplares);
 	void setEmprestados(int emprestados);
 
+	void clearAutor();
+
 	virtual void imprimir();
 	virtual void cadastrar(int id);
 	virtual void editar();
