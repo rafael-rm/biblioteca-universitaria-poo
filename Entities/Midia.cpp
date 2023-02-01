@@ -26,25 +26,6 @@ void Midia::imprimir() {
 
 	cout << endl << endl << "\t\t\t\t\t\tCDU: " << getCdu() << endl << endl;
 	cout << "-----------------------------------------------------------------------------------------" << endl << endl;
-
-	/*cout << "Tipo: ";
-	switch (this->tipo) {
-		case 0: 
-			cout << "fita" << endl;
-			break;
-		case 1:
-			cout << "VHS" << endl;
-			break;
-		case 2:
-			cout << "CD" << endl;
-			break;
-		case 3:
-			cout << "DVD" << endl;
-			break;
-		default:
-			cout << "midia" << endl;
-			break;
-	}*/
 }
 
 void Midia::cadastrar(int id) {

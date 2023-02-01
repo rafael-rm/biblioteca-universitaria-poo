@@ -134,7 +134,7 @@ void AcervoBase::imprimir() {
 	cout << endl;
 };
 
-//todo setar Id auto-increment�vel
+
 void AcervoBase::cadastrar(int id) {
 	setId(id);
 

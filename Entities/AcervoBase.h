@@ -8,8 +8,8 @@
 using namespace std;
 
 
-class AcervoBase
-{
+class AcervoBase {
+	
 public:
 	AcervoBase();
 	~AcervoBase();
